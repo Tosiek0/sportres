@@ -41,4 +41,39 @@ header a
     width: 40px;
     margin-left: 20px;
 }
+.toogles{
+    margin-left: 820px;
+}
+.mode{
+    height: 40px;
+    width: 45px;
+}
+.font{
+    height: 40px;
+    width: 45px;
+}
+.toogle_font{
+    height: 30px;
+    width: 30px;
+    margin-top: 2px;
+}
+.toogle_mode{
+    height: 30px;
+    width: 30px;
+    margin-top: 2px;
+}
+body.light {
+    background-color: white;
+    color: black;
+}
 
+body.light header {
+    background-color: #ddd;
+}
+
+body.light a {
+    color: black;
+}
+body.big {
+    font-size: 20px;
+}
