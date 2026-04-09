@@ -112,8 +112,11 @@
     body.light a {
         color: black;
     }
-    body.light .box {
-        color: #ddd;
+    body.light .box{
+        background-color: #ddd;
+    }
+    body.light .match{
+        background-color: #ddd;
     }
     body.big {
         font-size: 20px;
