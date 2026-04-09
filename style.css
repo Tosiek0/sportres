@@ -112,6 +112,9 @@
     body.light a {
         color: black;
     }
+    body.light .box {
+        color: #ddd;
+    }
     body.big {
         font-size: 20px;
     }
