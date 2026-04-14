@@ -10,7 +10,7 @@ $error = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    $username = trim($_POST['login']);
+    $username = $_POST['login'];
     $password = $_POST['pass'];
 
     $stmt = $conn->prepare(
@@ -31,8 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             exit;
         }
     }
-
-    $error = "Zły login lub hasło";
 }
 ?>
 
