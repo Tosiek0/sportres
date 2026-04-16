@@ -10,11 +10,11 @@ $error = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    $username = $_POST['login'];
+    $username = trim($_POST['login']);
     $password = $_POST['pass'];
 
     $stmt = $conn->prepare(
-        "SELECT id, username, pass FROM users WHERE username = ?"
+        "SELECT id, username, password_hash FROM users WHERE username = ?"
     );
 
     $stmt->bind_param("s", $username);
@@ -23,27 +23,34 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($user = $result->fetch_assoc()) {
 
-        if ($password == $user['pass']) {
+        if (password_verify($password, $user['password_hash'])) {
+
             $_SESSION['id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
 
             header("Location: index.html");
             exit;
+        } else {
+            $error = "Nieprawidłowe hasło";
         }
+
+    } else {
+        $error = "Użytkownik nie istnieje";
     }
 }
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_login.css">
+    <link rel="stylesheet" href="style_log_reg.css">
     <link rel="icon" type="image/x-icon" href="images/sportres-logo-bt.png">
     <title>Logowanie</title>
 </head>
 <body>
+
 <header>
     <img src="images/sportres-logo.png" alt="logo" class="site_logo">
 </header>
@@ -51,16 +58,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <main>
     <div class="login">
         <h2>Logowanie</h2>
-        <form method="POST">
+
+        <?php if (!empty($error)): ?>
+            <p style="color:red;"><?php echo $error; ?></p>
+        <?php endif; ?>
+
+        <form method="POST" action="">
             <label>Login:</label><br>
-            <input type="text" name="login" required><br><br>
+            <input type="text" name="login" required minlength="3"><br><br>
 
             <label>Hasło:</label><br>
-            <input type="password" name="pass" required><br><br>
+            <input type="password" name="pass" required minlength="6"><br><br>
 
             <button type="submit">Zaloguj się</button>
         </form>
     </div>
 </main>
+
 </body>
 </html>
