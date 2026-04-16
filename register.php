@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </header>
 
 <main>
-    <div class="login">
+    <div class="login_register">
         <h2>Rejestracja</h2>
 
         <?php if (!empty($error)): ?>

@@ -52,12 +52,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
 
 <header>
-    <a href=register.php><img src="images/sportres-logo.png" alt="logo" class="site_logo"></a>
+    <a href=login.php><img src="images/sportres-logo.png" alt="logo" class="site_logo"></a>
     <a href=register.php><button id="logreg">Zarejestruj się</button></a>
 </header>
 
 <main>
-    <div class="login">
+    <div class="login_register">
         <h2>Logowanie</h2>
 
         <?php if (!empty($error)): ?>
