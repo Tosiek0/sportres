@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
 
 <header>
-    <img src="images/sportres-logo.png" alt="logo" class="site_logo">
+    <a href=register.php><img src="images/sportres-logo.png" alt="logo" class="site_logo"></a>
     <a href=login.php><button id="logreg">Zaloguj się</button></a>
 </header>
 
