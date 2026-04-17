@@ -6,7 +6,6 @@ if (!$conn) {
     die("Błąd: " . mysqli_connect_error());
 }
 
-// 1. Pobieramy dane i zapisujemy do zmiennej $matches
 $sql = "
 SELECT 
     t1.name AS home_team, 
@@ -36,7 +35,7 @@ if ($result && $result->num_rows > 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="images/sportres-logo-bt.png">
-    <title>Document</title>
+    <title>Piłka Nożna</title>
 </head>
 <body>
     <header>
