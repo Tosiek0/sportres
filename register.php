@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <p style="color:green;"><?php echo $success; ?></p>
         <?php endif; ?>
 
-        <form method="POST" action="">
+        <form method="POST" action="register.php">
             <label>Login:</label><br>
             <input type="text" name="login" required minlength="3"><br><br>
 
