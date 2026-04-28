@@ -143,3 +143,65 @@ body.big #logreg{
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 18px;
 }
+/* FORMULARZE */
+form{
+    background-color: #252529;
+    width: 500px;
+    padding: 40px;
+    margin: 30px auto;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+form label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+form input {
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 10px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: #3b3b3f;
+    color: white;
+}
+
+form button {
+    margin-top: 25px;
+    padding: 10px;
+    background-color: #e71340;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+body.light form {
+    background-color: #ddd;
+}
+
+body.light form input {
+    background-color: #fff;
+    color: black;
+}
+
+body.light form button {
+    color: white;
+}
+body.big form input {
+    font-size: 16px;
+    height: 40px;
+}
+
+body.big form button {
+    font-size: 16px;
+}
