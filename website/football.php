@@ -37,27 +37,27 @@ if ($result && $result->num_rows > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="images/sportres-logo-bt.png">
+    <link rel="icon" type="image/x-icon" href="../images/sportres-logo-bt.png">
     <title>Piłka Nożna</title>
 </head>
 <body>
     <header>
-        <a href="home.html"><img src="images/sportres-logo.png" alt="logo" class="site_logo"></a>
-        <img src="images/football.png" alt="footbal_icon" class="icons">
+        <a href="home.html"><img src="../images/sportres-logo.png" alt="logo" class="site_logo"></a>
+        <img src="../images/football.png" alt="footbal_icon" class="icons">
         <a href="football.php" class="sports">Piłka Nożna</a>
-        <img src="images/hockey.png" alt="hockey_icon" class="icons">
+        <img src="../images/hockey.png" alt="hockey_icon" class="icons">
         <a href="hockey.html" class="sports">Hokej</a>
-        <img src="images/basketball.png" alt="basketball_icon" class="icons">
+        <img src="../images/basketball.png" alt="basketball_icon" class="icons">
         <a href="basketball.html" class="sports">Koszykówka</a>
-        <img src="images/tennis.png" alt="tennis_icon" class="icons">
+        <img src="../images/tennis.png" alt="tennis_icon" class="icons">
         <a href="tennis.html" class="sports">Tenis</a>
-        <a href="register.php"><button id="logreg">Wyloguj się</button></a>
+        <a href="login.php"><button id="logreg">Wyloguj się</button></a>
         <div class="toogles">
             <button onclick="document.body.classList.toggle('big')" class="font">
-                <img src="images/font_toogle.png" alt="toogle_font" class="toogle_font">
+                <img src="../images/font_toogle.png" alt="toogle_font" class="toogle_font">
             </button>
             <button onclick="document.body.classList.toggle('light')" class="mode">
-                <img src="images/toogle.png" alt="toogle_mode" class="toogle_mode">
+                <img src="../images/toogle.png" alt="toogle_mode" class="toogle_mode">
             </button>
         </div>
     </header>

@@ -46,13 +46,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_log_reg.css">
-    <link rel="icon" type="image/x-icon" href="images/sportres-logo-bt.png">
+    <link rel="icon" type="image/x-icon" href="../images/sportres-logo-bt.png">
     <title>Logowanie</title>
 </head>
 <body>
 
 <header>
-    <a href=login.php><img src="images/sportres-logo.png" alt="logo" class="site_logo"></a>
+    <a href=login.php><img src="../images/sportres-logo.png" alt="logo" class="site_logo"></a>
     <a href=register.php><button id="logreg">Zarejestruj się</button></a>
 </header>
 
