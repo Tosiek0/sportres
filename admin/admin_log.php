@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION['id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
 
-            header("Location: admin.php");
+            header("Location: admin_home.html");
             exit;
         } else {
             $error = "Nieprawidłowe hasło";
