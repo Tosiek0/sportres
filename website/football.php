@@ -19,7 +19,8 @@ SELECT
 FROM games g
 JOIN teams t1 ON g.id_home = t1.id
 JOIN teams t2 ON g.id_away = t2.id
-JOIN leauges l ON g.id_league = l.id    
+JOIN leauges l ON g.id_league = l.id
+ORDER BY date ASC   
 ";
 
 $result = $conn->query($sql);
